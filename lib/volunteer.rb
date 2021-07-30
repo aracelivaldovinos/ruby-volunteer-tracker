@@ -35,5 +35,10 @@ attr_accessor :name, :hours
     volunteers
   end 
 
+  def save 
+    result = DB.exec("INSERT INTO volunteers (name, hours, project_id) VALUES ('#{@name}', #{@hours},#{@project_id}) RETURNING id;")
+    @id = result.first.fetch("id").to_i
+  end 
+
 
 end 
