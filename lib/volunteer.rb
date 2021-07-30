@@ -63,5 +63,9 @@ attr_accessor :name, :hours
     volunteers
   end 
 
+  def project
+    Project.find(project_id)
+  end 
+
 
 end 
