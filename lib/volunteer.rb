@@ -18,5 +18,9 @@ attr_accessor :name, :hours
     @project_id
   end 
 
+  def ==(compare_name)
+    self.name == compare_name.name
+  end 
+
 
 end 
