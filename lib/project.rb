@@ -45,19 +45,15 @@ attr_accessor :title
     Project.new({:title=> title, :id => id})
   end 
 
-  # def update(title)
-  #   @title = title
-  #   update = DB.exec("UPDATE projects SET name = '#{@title}' WHERE id= #{@id};")
-  #   # project = DB.exec("SELECT name FROM projects WHERE id = #{@id};").first
-  #   binding.pry
-  #   title = project.fetch("name")
-  #   id = project.fetch("id").to_i 
-  #   Project.new({:title=> title, :id => id})
-  #   binding.pry
-  # end 
+  def update(title)
+    @title = title
+    update = DB.exec("UPDATE projects SET name = '#{@title}' WHERE id= #{@id};")
+  end 
+    
 
   def delete
-    DB.exec("DELETE FROM projects WHERE id = #{@id}")
+   DB.exec("DELETE FROM projects WHERE id = #{@id}")
+
   end 
  
 
