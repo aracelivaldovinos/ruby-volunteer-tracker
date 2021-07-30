@@ -40,5 +40,14 @@ attr_accessor :name, :hours
     @id = result.first.fetch("id").to_i
   end 
 
+  def self.find(id)
+    project = DB.exec("SELECT * FROM volunteers WHERE id = #{id}").first
+    name = project.fetch("name")
+    hours = project.fetch("hours").to_f
+    project_id = project.fetch("project_id").to_i
+    id = project.fetch("id").to_i
+    Volunteer.new({:name => name, :hours => hours, :project_id => project_id, :id => id})
+  end 
+
 
 end 
