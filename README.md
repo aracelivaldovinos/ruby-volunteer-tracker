@@ -16,6 +16,7 @@
 
 ## Description
 _Project Description_
+![Volunteer Tracker Schema](Screen Shot 2021-07-30 at 10.21.36 AM.png)
 
 
 ## Setup/Installation Requirements
