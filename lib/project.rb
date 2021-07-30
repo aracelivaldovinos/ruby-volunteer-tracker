@@ -18,8 +18,7 @@ attr_accessor :title
   end 
 
   def ==(compare_title)
-    # binding.pry
-    self.title == (compare_title.title)
+    self.title == compare_title.title
   end 
 
   def self.all
