@@ -41,12 +41,26 @@ attr_accessor :name, :hours
   end 
 
   def self.find(id)
-    project = DB.exec("SELECT * FROM volunteers WHERE id = #{id}").first
+    project = DB.exec("SELECT * FROM volunteers WHERE id = #{id};").first
     name = project.fetch("name")
     hours = project.fetch("hours").to_f
     project_id = project.fetch("project_id").to_i
     id = project.fetch("id").to_i
     Volunteer.new({:name => name, :hours => hours, :project_id => project_id, :id => id})
+  end 
+
+  def self.find_by_project(p_id)
+    volunteers = []
+    returned_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = #{p_id};")
+    returned_volunteers.each do |volunteer|
+      name = volunteer.fetch("name")
+      hours = volunteer.fetch("hours").to_f
+      project_id = volunteer.fetch("project_id").to_i
+      id = volunteer.fetch("id").to_i
+      # binding.pry
+      volunteers.push(Volunteer.new({:name => name, :hours => hours, :project_id => project_id, :id => id}))
+    end 
+    volunteers
   end 
 
 
