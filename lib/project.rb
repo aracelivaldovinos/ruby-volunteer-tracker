@@ -17,6 +17,11 @@ attr_accessor :title
     @id 
   end 
 
+  def ==(compare_title)
+    # binding.pry
+    self.title == (compare_title.title)
+  end 
+
   def self.all
     returned_projects = DB.exec("SELECT * FROM projects")
     projects = []
@@ -28,9 +33,9 @@ attr_accessor :title
     projects
   end 
 
-  def ==(compare_title)
-    # binding.pry
-    self.title == (compare_title.title)
+  def save 
+    result = DB.exec("INSERT INTO projects (name) VALUES('#{@title}') RETURNING id;")
+    @id = result.first.fetch("id").to_i
   end 
  
 
