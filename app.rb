@@ -17,3 +17,12 @@ get('/projects') do
   @projects = Project.all
   erb(:projects)
 end
+
+post('/projects') do
+  # binding.pry
+  name = params[:title]
+  project = Project.new({:title => name, :id => nil})
+  project.save()
+  @projects= Project.all()
+  erb(:projects)
+end 
