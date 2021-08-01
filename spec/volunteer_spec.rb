@@ -77,4 +77,14 @@ end
       expect(volunteer1.project()).to(eq(@project))
     end
   end
+  describe('#update') do
+    it("#updates a volunteer by id") do
+      volunteer1 = Volunteer.new({:name => 'Jane', :hours => 2.5, :project_id => @project.id, :id => nil})
+      volunteer1.save
+      volunteer1.update("Julie", @project.id)
+      expect(volunteer1.name).to(eq("Julie"))
+    end
+  end
+  
+
 end
