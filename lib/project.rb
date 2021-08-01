@@ -42,6 +42,7 @@ attr_accessor :title
     title = project.fetch("name")
     id = project.fetch("id").to_i 
     Project.new({:title=> title, :id => id})
+    # binding.pry
   end 
 
   def update(title)

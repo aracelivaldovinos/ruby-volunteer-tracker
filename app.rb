@@ -18,11 +18,29 @@ get('/projects') do
   erb(:projects)
 end
 
+get('/projects/:id') do 
+  @project = Project.find(params[:id].to_i())
+  erb(:project)
+end 
+
 post('/projects') do
   # binding.pry
   name = params[:title]
   project = Project.new({:title => name, :id => nil})
   project.save()
   @projects= Project.all()
+  erb(:projects)
+end 
+
+get('/projects/:id/edit') do 
+  # binding.pry
+  @project = Project.find(params[:id].to_i())
+  erb(:edit_project)
+end 
+
+patch('/projects/:id') do 
+  @project = Project.find(params[:id].to_i())
+  @project.update(params[:title])
+  @projects = Project.all
   erb(:projects)
 end 
