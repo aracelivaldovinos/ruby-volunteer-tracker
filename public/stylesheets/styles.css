@@ -1,0 +1,66 @@
+body{
+  background-image: url(https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1232&q=80);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.container{
+  background-color: #e8e8e4;
+  opacity: 0.85;
+  margin: 10%;
+  
+  
+}
+
+.text {
+  text-align: center;
+  font-family: "Trirong", serif;
+  font: weight 1000px;
+}
+ul{
+  text-align: center;
+  list-style-position: inside;
+}
+
+a{
+  font-size: 18px;
+  font-family: "Trirong", serif;
+}
+
+
+.form-group{
+  font-family: "Trirong", serif;
+  color: black;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.button{
+  margin-bottom: 10%;
+  font-family: "Trirong", serif;
+}
+
+.col-sm{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.h4{
+  font-family: "Trirong", serif;
+}
+
+form{
+  font-size: 18px;
+  font-family: "Trirong", serif;
+  margin-top: 2%;
+}
+
+#volunteer_name{
+  font-family: "Trirong", serif;
+}
+
+
+
