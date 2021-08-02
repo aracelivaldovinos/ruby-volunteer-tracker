@@ -15,7 +15,7 @@
 
 
 ## Description
-_An application that tracks projects and the volunteers working on them. Each volunteer will belong to only one project (one project, many volunteers).The application cover the following test and user stories:_
+_An application that tracks projects and the volunteers working on them. Each volunteer will belong to only one project (one project, many volunteers).The application covers the following test and user stories:_
 
 _Test_
 * _You may alter a unit test only if you are adding more attributes to volunteers or projects._
@@ -44,7 +44,7 @@ _Schema_
 ## Known Bugs/Goals
 * _When adding a volunteer to the project an extra blank field is generated_
 * _I would like to add the further exploration for hours_
-* _I rewrote update method, I need work on existing to make it pass_
+* _I rewrote update method, I need work on existing update method to make it pass_
 
 
 ## License
