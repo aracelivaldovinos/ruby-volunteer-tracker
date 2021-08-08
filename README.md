@@ -36,9 +36,9 @@ _Schema_
 ## Setup/Installation Requirements
 * _This project uses postgres, inorder to download use the following link: [Postgres Download](https://www.postgresql.org/download/)_
 * _To recreate the database enter the following command in the terminal/command line:_
-    * _createdb [volunteer_tracker]_
-    * _psql [volunteer_tracker] < database_backup.sql_
-    * _createdb -T [volunteer_tracker] [volunteer_tracker_test]_
+    * _createdb volunteer_tracker_
+    * _psql volunteer_tracker < database_backup.sql_
+    * _createdb -T volunteer_tracker volunteer_tracker_test_
 * _Clone that repository down to your desktop._
 * _Navigate to the cloned folder and run `bundle install` in the terminal/command line to download dependencies_
 * _Open cloned folder in the editor of your choice_
