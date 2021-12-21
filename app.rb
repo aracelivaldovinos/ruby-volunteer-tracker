@@ -9,8 +9,7 @@ require("pg")
 DB = PG.connect({:dbname => "volunteer_tracker"})
 
 get('/') do
-  @projects = Project.all
-  erb(:projects)
+  erb(:homepage)
 end
 
 get('/projects') do

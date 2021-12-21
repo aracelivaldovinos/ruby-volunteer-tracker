@@ -1,30 +1,45 @@
-<div class="row">
-  <div class="col-sm">
-    <h1 class="text">Add a new volunteer</h1>
-    <hr>
-      <form action="/projects/<%= @project.id %>/volunteers" method="post">
-        <div class="form-group">
-          <label for="name">Volunteer name:</label>
-          <input id="n" name="name" class="form-control" type="text" required>
-        </div>
-        <div class= "button">
-          <button type="submit" class="btn btn-primary">Add volunteer</button>
-        </div>
-      </form>
+
+<link href="/stylesheets/projects.css" rel="stylesheet" type="text/css">
+
+<div class="body">
+  <div class="holder">
+    <div class="content">
+      <div class="items">
+        <h3>Add a new volunteer</h3>
+        <p>Fill in the line below.</p>
+        <form action="/projects/<%= @project.id %>/volunteers" method="post">
+          <div class="col-md-12">
+            <input class="form-control" type="text" name="name" placeholder="Volunteer name" required>
+          </div>
+          <div class="form-button mt-3">
+            <button id="submit" type="submit" class="btn btn-warning">Submit</button>
+          </div>  
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="col-sm">
-    <h1 class= "text">Project: <%=@project.title %></h1>
-    <hr>
-    <h4 class="text">Volunteers</h4>
-    <% if @project.volunteers.any? %>
-      <ol>
-        <% @project.volunteers.each do |volunteer| %>
-          <li><a href="/projects/<%= @project.id %>/volunteers/<%= volunteer.id%>"><%=volunteer.name %></a><li>
-        <%end %> 
-      </ol>
-    <%else %> 
-      <p> There are no volunteers listed for this project yet.</p>
-    <%end %> 
+</div>
+
+
+
+<div class="body">
+  <div class="holder-1">
+    <div class="content">
+      <div class="items">
+        <h3>Volunteers</h3>
+        <p >
+          <a href="/projects/<%= @project.id %>/edit"> Edit Project</a>
+        </p>
+          <% if @project.volunteers.any? %>
+            <ol>
+              <% @project.volunteers.each do |volunteer| %>
+                <p><a href="/projects/<%= @project.id %>/volunteers/<%= volunteer.id%>"><%=volunteer.name %></a></p>
+              <% end %>
+            </ol>
+          <% else %>
+          <p>There are currently no projects to display.</p>
+          <% end %>
+      </div>
+    </div>
   </div>
-  <p><a href="/projects/<%= @project.id %>/edit"> Edit Project</a></p><h5>|</h5><p><a href="/projects"> Go back</a></p>
 </div>

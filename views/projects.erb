@@ -1,30 +1,49 @@
-<div class="row">
-  <div class="col-sm">
-    <h1 class="text">Add a new project</h1>
-    <hr>
-    <form action="/projects" method="post">
-      <div class="form-group">
-        <label for="title">Project title:</label>
-        <input id="n" name="title" class="form-control" type="text" required>
+<link href="/stylesheets/projects.css" rel="stylesheet" type="text/css">
+
+<div class="body">
+  <div class="holder">
+    <div class="content">
+      <div class="items">
+        <h3>Create a Project Today</h3>
+        <p>Fill in the line below.</p>
+        <form action="/projects" method="post">
+          <div class="col-md-12">
+            <input class="form-control" type="text" name="title" placeholder="Project" required>
+          </div>
+          <div class="form-button mt-3">
+            <button id="submit" type="submit" class="btn btn-warning">Submit</button>
+          </div>  
+        </form>
       </div>
-      <div class= "button">
-        <button type="submit" class="btn btn-primary">Create Project</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-sm">
-    <h1 class="text">Projects:</h1>
-    <hr>
-    <% if @projects.any? %>
-      <ul>
-        <% @projects.each do |project| %>
-          <li><a href="/projects/<%= project.id %>"><%= project.title %></a></li>
-        <% end %>
-      </ul>
-    <% else %>
-      <p>There are currently no projects to display.</p>
-    <% end %>
+    </div>
   </div>
 </div>
+
+<div class="body">
+  <div class="holder-1">
+    <div class="content">
+      <div class="items">
+        <h3>Projects</h3>
+        <div class="list">
+          <% if @projects.any? %>
+            <ol>
+              <% @projects.each do |project| %>
+                <p><a href="/projects/<%= project.id %>"><%= project.title %></a></p>
+              <% end %>
+            </ol>
+          <% else %>
+          <p>There are currently no projects to display.</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
 

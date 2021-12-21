@@ -7,8 +7,21 @@
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   </head>
   <body>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Volunteer Projects</a>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="/projects">Create Project</a>
+      </div>
+    </nav>  
+    <%= yield %>
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>
+          <q>Volunteering is at the very core of being a human.  No one has made it through life without someone else’s help.</q>
+          <em>– Heather French Henry</em>
+        </small>
+      </div>
+    </footer>
   </body>
 </html>
