@@ -4,6 +4,8 @@
 
 #### By Araceli Valdovinos
 
+![volunteer](volunteer_image.png)
+
 ## Technologies Used
 
 * _Ruby_
@@ -47,9 +49,9 @@ _Schema_
 
 
 ## Known Bugs/Goals
-* _When adding a volunteer to the project an extra blank field is generated_
+* _When adding additional projects and volunteers the bottom of the list textarea\box hides behind the footer_
 * _I would like to add the further exploration for hours_
-* _I rewrote update method, I need work on existing update method to make it pass_
+
 
 
 ## License
